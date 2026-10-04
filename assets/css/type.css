@@ -1,0 +1,28 @@
+.type-text {
+  font-family: var(--sans-font);
+}
+
+.type-text.size-medium {
+  font-size: 1.125rem; /*18px*/
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+a {
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+a,
+a:hover {
+  text-underline-position: under;
+  text-underline-offset: 0.0625rem;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 0.0625rem;
+}
+
+a:hover {
+  text-underline-offset: 0.125rem;
+}

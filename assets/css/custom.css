@@ -1,0 +1,105 @@
+/* Global variables. */
+:root {
+  /* Set sans-serif & mono fonts */
+  --sans-font: "Karla", sans-serif;
+  --serif-font: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --standard-border-radius: 5px;
+  --border-width: 1px;
+
+  /* Default (light) theme */
+  --bg: #fff8e6;
+  --accent-bg: #f5f7ff;
+  --text: #2a302d;
+  --text-light: #585858;
+  --border: #c1ff72;
+  --accent: #e30050;
+  --accent-hover: #1266e2;
+  /* --accent-text: var(--bg); */
+  --accent-text: #e30050;
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #212121;
+    --accent-bg: #2b2b2b;
+    --text: #dcdcdc;
+    --text-light: #ababab;
+    --accent: #ffb300;
+    --accent-hover: #ffe099;
+    --accent-text: var(--bg);
+    --code: #f06292;
+    --preformatted: #ccc;
+    --disabled: #111;
+  }
+  /* Add a bit of transparency so light media isn't so glaring in dark mode */
+  img,
+  video {
+    opacity: 0.8;
+  }
+}
+
+/* body {
+  display: block;
+} */
+
+body,
+body > header,
+body > footer {
+  display: grid;
+  /* grid-template-columns: 1fr min(45rem, 90%) 1fr; */
+  grid-template-columns:
+    1fr min(64rem, calc(100% - calc(var(--block-padding) * 2)))
+    1fr;
+}
+
+body > * {
+  padding: 0;
+  margin: 0;
+}
+
+body > header {
+  background-color: var(--bg);
+  /* padding: var(--block-padding); */
+  padding: 0;
+}
+
+body > header > :only-child {
+  margin-block-start: 0;
+}
+
+body > main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+body > footer {
+  margin: 0;
+  padding: 0;
+  grid-column: 1/-1;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+
+p {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 599px) {
+  body > main {
+    display: block;
+  }
+}

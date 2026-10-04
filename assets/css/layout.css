@@ -1,0 +1,60 @@
+:root {
+  /* sizes */
+  --block-padding: 48px;
+}
+
+body {
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+#header,
+#footer {
+  grid-column: 2; /* matches simple.css default for all body > * elements */
+  padding: var(--block-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header > img {
+  margin: 0;
+}
+
+main {
+  border-left: var(--border-width) solid var(--border);
+  border-right: var(--border-width) solid var(--border);
+}
+
+#content {
+  grid-column: 1;
+  padding: var(--block-padding);
+}
+
+#feed {
+  grid-column: 2;
+  border-left: var(--border-width) solid var(--border);
+  padding: var(--block-padding);
+}
+
+#feed > h2 {
+  margin: 0;
+}
+
+#footer > p {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* sizes */
+    --block-padding: 24px;
+  }
+}
+
+@media (max-width: 599px) {
+  #feed {
+    border-left: none;
+    border-top: var(--border-width) solid var(--border);
+  }
+}
