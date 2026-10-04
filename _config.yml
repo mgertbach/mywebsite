@@ -7,7 +7,7 @@ author: Molly Gertenbach
 summary: Portfolio and personal website of designer/developer Molly Gertenbach
 lang: en
 locale: en_US
-url: "https://www.mgertenbach.com" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://www.mgertenbach.com" # the base hostname & protocol for your site, e.g. http://example.com
 #baseurl: "" # the subpath of your site, e.g. /blog
 title: Molly Gertenbach | Website # the name of your site, e.g. ACME Corp.
 
