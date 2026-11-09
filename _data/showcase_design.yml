@@ -1,0 +1,24 @@
+- client: University of Pittsburgh
+  project: Pitt Online Website
+  image: assets/images/pitt_program.png
+  image_alt: Pitt Online Website
+  testimonial: |
+    If you are looking for a designer who elevates a project from good to best-in-class, look no further than Molly. Working alongside our lead designer on a recent website project, she was instrumental in building a scalable Figma environment that ensured a perfectly clean transition from design to development.
+    Molly helped established our entire component and style library from the ground up, organizing every individual element with incredible precision. She came to the table with fresh, innovative ideas every single week, constantly pushing our vision forward. Crucially, Molly made accessibility a true priority and ensured the user experience was flawlessly navigable across all devices. Her detail-oriented approach created an inclusive, responsive web experience that meets our prospective students' needs at every step of their journey and is a proud addition to our Pitt web ecosystem.
+    I highly recommend Molly to any team needing a dedicated, highly skilled designer who will champion
+    accessibility, organize complex design systems, and bring vibrant energy to the work!"
+- client: Convatec
+  project: Me+ Patient Companion App
+  image: assets/images/Convatec_ostomy-home.png
+- client: Convatec
+  project: Wound Care Analyis Dashboard
+  image: assets/images/Convatec_chart.png
+- client: T-Mobile
+  project: T-Mobile MONEY Application Design
+  image: assets/images/tmm_dashboard.png
+- client: Trovomics
+  project: RNA Analysis Web Application
+  image: assets/images/trovomics_edit-samples.png
+- client: Figgy
+  project: E-Commerce Website Design
+  image: assets/images/figgy_home.png

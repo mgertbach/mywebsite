@@ -1,0 +1,12 @@
+<section id="testimonials" class="type-text size-medium">
+  <h2 class="type-text size-medium weight-semibold">Testimonials:</h2>
+  {% for item in site.data.testimonials %}
+  <div class="testimonial__item">
+    {% include icons/quote.html %}
+    <blockquote>
+      <p>{{ item.testimonial }}</p>
+      <cite class="type-text size-tiny">- {{ item.credit }}</cite>
+    </blockquote>
+  </div>
+  {% endfor %}
+</section>

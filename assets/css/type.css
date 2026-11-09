@@ -1,28 +1,110 @@
 .type-text {
   font-family: var(--sans-font);
-}
-
-.type-text.size-medium {
-  font-size: 1.125rem; /*18px*/
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
 
+/* Type Sizes */
+.type-text.size-jumbo {
+  font-size: 2rem; /*32px*/
+}
+
+.type-text.size-large,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h2 {
+  font-size: 1.25rem; /*20px*/
+}
+
+.type-text.size-medium,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h3 {
+  font-size: 1.125rem; /*18px*/
+}
+
+.type-text.size-regular,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h4 {
+  font-size: 1rem; /*16px*/
+}
+
+.type-text.size-small,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h5,
+figcaption {
+  font-size: 0.875rem; /*14px*/
+}
+
+.type-text.size-tiny {
+  font-size: 0.75rem; /*12px*/
+}
+
+/* Font weights */
+.type-text.weight-medium,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h5 {
+  font-weight: 450;
+}
+
+.type-text.weight-semibold,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h2,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h3,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h4 {
+  font-weight: 600;
+}
+
+/* links */
 a {
-  font-weight: 500;
+  font-weight: 450;
   transition: 0.2s ease-in-out;
 }
 
 a,
 a:hover {
   text-underline-position: under;
-  text-underline-offset: 0.0625rem;
+  /* text-underline-offset: 0.0625rem; */
+  text-underline-offset: -0.1rem;
   text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 0.0625rem;
+  /* text-decoration-style: wavy; */
+  text-decoration-thickness: 0.05rem;
 }
 
 a:hover {
   text-underline-offset: 0.125rem;
+}
+
+/* Post Content - Text Styles */
+
+#content:is([data-layout="case-study"], [data-layout="post"]) > h2,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h3,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h4,
+#content:is([data-layout="case-study"], [data-layout="post"]) > h5 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+#content:is([data-layout="case-study"], [data-layout="post"])
+  > h2:not(:first-child) {
+  margin-top: 48px;
+}
+
+#content:is([data-layout="case-study"], [data-layout="post"]) > p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+#content:is([data-layout="case-study"], [data-layout="post"]) > p:has(+ ul) {
+  margin-bottom: 8px;
+}
+
+#content:is([data-layout="case-study"], [data-layout="post"]) > p:last-child {
+  margin-bottom: 0;
+}
+
+figcaption {
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+#content:is([data-layout="case-study"], [data-layout="post"])
+  > ul
+  li:not(:last-child) {
+  margin-bottom: 8px;
 }
