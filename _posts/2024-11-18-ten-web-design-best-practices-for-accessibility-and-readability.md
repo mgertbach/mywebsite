@@ -11,9 +11,17 @@ Text alignment is an often-overlooked aspect of web design, but it can significa
 
 ### Benefits of Left-Aligning Text for Users with:
 
-- **Dyslexia** – Justified text with uneven spacing can disrupt the reading flow for those with dyslexia. Left-aligned text reduces this effect.
-- **Visual impairments** – Consistent left alignment helps users with screen readers or magnifiers to track text more easily.
-- **Cognitive disabilities** – A predictable layout enhances comprehension and reduces mental fatigue.
+#### Dyslexia
+
+Justified text with uneven spacing can disrupt the reading flow for those with dyslexia. Left-aligned text reduces this effect.
+
+##### Visual impairments
+
+Consistent left alignment helps users with screen readers or magnifiers to track text more easily.
+
+##### Cognitive disabilities
+
+A predictable layout enhances comprehension and reduces mental fatigue.
 
 ### Why Avoid Justified Text?
 
