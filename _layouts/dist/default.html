@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="icon" href="{{ 'assets/images/favicon.png' | relative_url }}" />
 
 
   <title>{{ page.title }}</title>
@@ -13,9 +13,9 @@
   {% feed_meta %}
 
   <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/type.css">
+  <link rel="stylesheet" href="{{ 'assets/css/custom.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/layout.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/type.css' | relative_url }}">
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,42 +23,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
     rel="stylesheet">
 
+  <script src="https://cdn.usefathom.com/script.js" data-site="UMEOMZEK" defer></script>
+
 </head>
 
-<body>
+<body class="layout_{{page.layout}}">
   <header>
     <section id="header">
-      <img src="{{ 'assets/images/favicon.png' | relative_url }}" alt="Alt text" width="96">
+      <a class="logo" href="{{ '/' | relative_url }}">
+        <img src="{{ 'assets/images/favicon.png' | relative_url }}" alt="Alt text" width="96">
+      </a>
       <!-- <p>{{ page.description }}</p> -->
       {% include navigation.html %}
     </section>
   </header>
 
   <main>
-    <section id="content" class="type-text size-medium">
-      <h1 style="display: none; height: 0; width: 0;">About Molly Gertenbach</h1>
-      {{ content }}
+    <section id="main-content">
+      {% if layout.hero %}
+      <section id="hero" class="type-text size-medium" data-layout="{{page.layout}}">
+        {% include {{ layout.hero }} %}
+      </section>
+      {% endif %}
+      <section id="content" data-layout="{{page.layout}}"
+        class="type-text {% if page.layout == 'post' or page.layout == 'case-study' %}size-small{% else %}size-medium{% endif %}">
+        <!-- <h1 style="display: none; height: 0; width: 0;">{{ page.title }}</h1> -->
+        {{ content }}
+      </section>
+      {% if page.clients %} {% include clients.html %}{% endif %}
+      {% if page.testimonials %} {% include testimonials.html %}{% endif %}
     </section>
-    <section id="feed">
-      <h2 class="type-text size-medium">Recent thoughts:</h2>
-      <ul>
-        {% if site.posts.size == 0 %}
-        <p>No posts...yet.</p>
-        {% else %}
-        {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-        {% endif %}
-      </ul>
+    {% if page.sidebar %}
+    <section id="sidebar" class="type-text size-medium">
+      {% include {{ page.sidebar }} %}
     </section>
+    {% endif %}
   </main>
 
   <footer>
     <section id="footer">
       <p id="footer-left">&copy; Molly Gertenbach {{ site.time | date: '%Y' }}</p>
-      <p id="footer-right">Built with Jekyll and Simple.css</p>
+      <p id="footer-right">Built with Jekyll, Simple.css, and <em>no AI.</em></p>
     </section>
   </footer>
 </body>

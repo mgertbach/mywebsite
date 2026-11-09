@@ -1,0 +1,7 @@
+<div class="showcase">
+  {% if page.showcase == "design" %}
+  {% for item in site.data.showcase_design %}
+  {% include asset.html source=item.image alt=item.image_alt %}
+  {% endfor %}
+  {% endif %}
+</div>

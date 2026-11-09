@@ -1,0 +1,14 @@
+<h2 class="type-text size-medium weight-semibold">Recent posts:</h2>
+<ul class="recent-posts">
+  {% if site.posts.size == 0 %}
+  <p>No posts...yet.</p>
+  {% else %}
+  {% for post in site.posts limit:3 %}
+  <li class="recent-posts__item">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <p class="type-text size-tiny">{{ post.date | date: '%m.%d.%Y' }}</p>
+  </li>
+  {% endfor %}
+  {% endif %}
+</ul>
+<a class="button" href="{{ '/blog/' | relative_url }}">View all posts</a>
